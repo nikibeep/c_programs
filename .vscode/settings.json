@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        "conio.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "dos.h": "c"
+    },
+    "sqltools.connections": []
+}
