@@ -33,30 +33,32 @@ void infixToPostfix(char *infix, char *postfix) {
     char c;
     for (i = 0; i < strlen(infix); i++) {
         c = infix[i];
-        if (isalnum(c))
+        if (isalnum(c)) {
             postfix[j++] = c;
-        else if (c == '(')
+            
+        } else if (c == '(') {
             push(c);
-        else if (c == ')') {
+            
+        } else if (c == ')') {
             while ((c = pop()) != '(') {
                 postfix[j++] = c;
-                printf("%c\n", c);
+               
             }
         } else {
-            while (priority(stack[top]) >= priority(c)) {
+            while (priority(stack[top]) >= priority(c) && top != -1) {
                 postfix[j++] = pop();
-                printf("%c\n", stack[top + 1]);
+                
             }
             push(c);
         }
+        postfix[j] = '\0';
+        puts(postfix);
     }
     while (top != -1) {
         postfix[j++] = pop();
-        printf("%c\n", stack[top + 1]);
     }
     postfix[j] = '\0';
 }
-
 
 int main() {
     char infix[MAX_EXPR_SIZE], postfix[MAX_EXPR_SIZE];
