@@ -2,14 +2,17 @@
 #include<stdlib.h>
 #include<time.h>
     int display(int a[],int n)
-    {int i;
+    {
+        int i;
         for(i=0;i<n;i++)
         {
             printf("%d ",a[i]);
         }
     }
     int bubble(int a[],int n)
-    {int i,j,temp;
+    {
+        int i,j,temp;
+        printf("Bubble sort");
         for(i=0;i<n-1;i++)
         {
             for(j=0;j<n-i-1;j++)
@@ -31,7 +34,9 @@
         }
     }
     int insertion(int a[],int n)
-    {int i,j,temp;
+    {
+        int i,j,temp;
+        printf("Insertion sort");
         for(i=1;i<n;i++)
         {
             temp=a[i];
@@ -52,7 +57,9 @@
         }
     }
     int selection(int a[],int n)
-    {int i,j,temp,min;
+    {
+        int i,j,temp,min;
+        printf("Selection sort");
         for(i=0;i<n-1;i++)
         {
             min=i;
