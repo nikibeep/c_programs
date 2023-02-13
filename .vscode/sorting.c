@@ -22,7 +22,7 @@
                 }
             }
             printf("Steps: ",i+1);
-            display(a,n);
+            printf("\n",display(a,n));
         }
         printf("The sorted array is: ");
         for(i=0;i<n;i++)
@@ -43,7 +43,7 @@
             }
             a[j+1]=temp;
             printf("Steps: ",i+1);
-            display(a,n);
+            printf("\n",display(a,n));
         }
         printf("The sorted array is: ");
         for(i=0;i<n;i++)
@@ -67,7 +67,7 @@
             a[i]=a[min];
             a[min]=temp;
             printf("Steps: ",i+1);
-            display(a,n);
+            printf("\n",display(a,n));
         }
         printf("The sorted array is: ");
         for(i=0;i<n;i++)
@@ -79,7 +79,7 @@ void main()
 
 {   
     int a[10],n,i,choice;
-    printf("Enter the length of the array: \n");
+    printf("\nEnter the length of the array: \n");
     scanf("%d",&n);
     //menu driven program
     //generate random numbers
