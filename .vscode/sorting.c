@@ -12,7 +12,7 @@
     int bubble(int a[],int n)
     {
         int i,j,temp;
-        printf("Bubble sort");
+        printf("Bubble sort\n");
         for(i=0;i<n-1;i++)
         {
             for(j=0;j<n-i-1;j++)
@@ -23,9 +23,9 @@
                     a[j]=a[j+1];
                     a[j+1]=temp;
                 }
-            }
             printf("Steps: ",i+1);
             printf("\n",display(a,n));
+            }
         }
         printf("The sorted array is: ");
         for(i=0;i<n;i++)
@@ -36,7 +36,7 @@
     int insertion(int a[],int n)
     {
         int i,j,temp;
-        printf("Insertion sort");
+        printf("Insertion sort\n");
         for(i=1;i<n;i++)
         {
             temp=a[i];
@@ -45,10 +45,11 @@
             {
                 a[j+1]=a[j];
                 j--;
+                printf("Steps: ",i+1);
+                printf("\n",display(a,n));
             }
             a[j+1]=temp;
-            printf("Steps: ",i+1);
-            printf("\n",display(a,n));
+
         }
         printf("The sorted array is: ");
         for(i=0;i<n;i++)
@@ -59,7 +60,7 @@
     int selection(int a[],int n)
     {
         int i,j,temp,min;
-        printf("Selection sort");
+        printf("Selection sort\n");
         for(i=0;i<n-1;i++)
         {
             min=i;
@@ -69,12 +70,13 @@
                 {
                     min=j;
                 }
+            printf("Steps: ",i+1);
+            printf("\n",display(a,n));
             }
             temp=a[i];
             a[i]=a[min];
             a[min]=temp;
-            printf("Steps: ",i+1);
-            printf("\n",display(a,n));
+
         }
         printf("The sorted array is: ");
         for(i=0;i<n;i++)
