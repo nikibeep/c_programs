@@ -129,6 +129,27 @@
             k++;
         }
     }
+    //quick sort with steps
+    int partition(int a[],int l,int r)
+    {
+        int i,j,temp;
+        int pivot=a[r];
+        i=l-1;
+        for(j=l;j<r;j++)
+        {
+            if(a[j]<=pivot)
+            {
+                i++;
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+        temp=a[i+1];
+        a[i+1]=a[r];
+        a[r]=temp;
+        return i+1;
+    }
 void main()
 
 {   
@@ -147,7 +168,7 @@ void main()
         printf("%d ",a[i]);
     }
     printf("\nEnter the choice of sorting algorithm: ");
-    printf("1. Bubble sort  2. Insertion sort  3. Selection sort  4. Exit\n");
+    printf("1. Bubble sort  2. Insertion sort  3. Selection sort  4. Merge sort 5. Quick sort 6. Exit\n");
     scanf("%d",&choice);
     switch(choice)
     {
@@ -159,7 +180,9 @@ void main()
                 break;
         case 4: merge(a,0,n/2,n-1);
                 break;
-        case 5: exit(0);
+        case 5: partition(a,0,n-1);
+                break;
+        case 6: exit(0);
                 break;
         default: printf("Invalid choice");
     }
