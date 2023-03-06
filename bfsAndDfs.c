@@ -155,6 +155,15 @@ for (int i = 0; i < n; i++) {
         scanf("%d", &matrix[i][j]);
     }
 }
+//print the adjacency matrix
+printf("The adjacency matrix is:\n");
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        printf("%d ", matrix[i][j]);
+    }
+    printf("\n");
+}
+
 
 while (1) {
     printf("\n1. Breadth First Search (BFS)\n2. Depth First Search (DFS)\n3. Exit\nEnter your choice: ");
