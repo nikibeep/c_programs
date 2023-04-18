@@ -1,6 +1,0 @@
-struct emp {
-    char name[50];
-    float salary;
-    int age;
-    int id;
-}
